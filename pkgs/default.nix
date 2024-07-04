@@ -6,4 +6,5 @@ with super; {
   # Fonts
   prociono = callPackage ./prociono.nix {};
   fanwood = callPackage ./fanwood.nix {};
+  azuki = callPackage ./azuki.nix {};
 }
