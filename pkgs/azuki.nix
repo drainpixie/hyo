@@ -2,16 +2,15 @@
 stdenvNoCC.mkDerivation {
   name = "azuki";
 
-  src = builtins.fetchGit {
-    url = "https://github.com/mushchlo/azukipatch";
-    ref = "master";
-    rev = "352431ffd126986f5a6156832845287beed3e874";
+  src = builtins.fetchurl {
+    url = "https://github.com/mushchlo/azukipatch/releases/download/v1.0/patched.ttf";
+    sha256 = "15zyqzhcajzabpsa2mgf7qya31q8afpjjsipf4ymnqm2mb2cgvyb";
   };
 
   installPhase = ''
-    mkdir -p $out/share/fonts
-    mkdir -p $out/share/fonts/opentype
-
-    find -name \*.otf -exec mv {} $out/share/fonts/opentype/ \;
+    mkdir -p $out/share/fonts/truetype
+    cp $src $out/share/fonts/truetype/azuki.ttf
   '';
+
+  phases = ["installPhase" "patchPhase"];
 }

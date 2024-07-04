@@ -9,7 +9,6 @@ stdenvNoCC.mkDerivation {
   };
 
   installPhase = ''
-    mkdir -p $out/share/fonts
     mkdir -p $out/share/fonts/opentype
     mkdir -p $out/share/fonts/truetype
 
