@@ -8,4 +8,7 @@ with super; {
   fanwood = callPackage ./fanwood.nix {};
   beedii = callPackage ./beedii.nix {};
   azuki = callPackage ./azuki.nix {};
+
+  # Apps
+  kc = callPackage ./kc.nix {};
 }
