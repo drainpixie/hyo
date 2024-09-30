@@ -11,4 +11,5 @@ with super; {
 
   # Apps
   kc = callPackage ./kc.nix {};
+  gign = callPackage ./gign.nix {};
 }
