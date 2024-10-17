@@ -15,6 +15,5 @@ stdenvNoCC.mkDerivation rec {
   installPhase = ''
     mkdir -p $out/share/fonts/truetype
     find . -name "*.ttf" -exec cp {} $out/share/fonts/truetype \;
-
   '';
 }

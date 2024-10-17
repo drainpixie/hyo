@@ -4,6 +4,7 @@ with super; {
   alabaster = callPackage ./alabaster.nix {};
 
   # Fonts
+  drafting-mono = callPackage ./drafting-mono.nix {};
   prociono = callPackage ./prociono.nix {};
   fanwood = callPackage ./fanwood.nix {};
   beedii = callPackage ./beedii.nix {};
