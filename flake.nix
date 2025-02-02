@@ -1,5 +1,5 @@
 {
-  description = "faye's nixos flakes";
+  description = "pixie's nixos flakes";
 
   inputs = {
     hooks.url = "github:cachix/pre-commit-hooks.nix";

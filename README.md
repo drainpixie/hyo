@@ -1,10 +1,27 @@
-# ❄️ pkgs
+# ❄️ hyo 氷
 
-nixos flake[s]
+personal nixos package[s]
 
-# 🖥️ dev
+## 🖥️ dev
 
 ```sh
 $ nix flake check
 $ nix flake show
+```
+
+## 📝 usage
+
+```nix
+{
+    inputs = {
+        nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+        hyo = {
+            url = "sourcehut:~pixie/hyo"
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+    };
+
+    # Add `hyo.packages.${super.system}` to your overlays
+}
 ```
