@@ -2,7 +2,7 @@
   description = "pixie's nixos flakes";
 
   inputs = {
-    hooks.url = "github:cachix/pre-commit-hooks.nix";
+    hooks.url = "github:cachix/git-hooks.nix";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
